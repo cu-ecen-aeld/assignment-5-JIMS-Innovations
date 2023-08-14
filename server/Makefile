@@ -4,8 +4,9 @@
 
 TARGET = aesdsocket
 CROSS_COMPILE=aarch64-none-linux-gnu-
+STATIC=-static
 all:
-	$(CROSS_COMPILE)gcc -static $(TARGET).c -o $(TARGET)
+	$(CROSS_COMPILE)gcc $(STATIC) $(TARGET).c -o $(TARGET)
 
 default: all
 
